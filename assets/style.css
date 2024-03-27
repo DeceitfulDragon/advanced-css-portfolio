@@ -97,6 +97,9 @@ section {
 .work-gallery article img {
     width: 100%;
     margin-bottom: 10px;
+    width: 100%; /* Ensures the image width always matches the article width */
+    height: 200px; /* Sets a fixed height for the images */
+    object-fit: cover; /* Ensures images cover the area without losing their aspect ratio */
 }
 
 /* Makes the featured work box span 2 instead of 1 */
