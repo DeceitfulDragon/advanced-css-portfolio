@@ -31,3 +31,7 @@ The clickable images for Eric's projects just return back to this repository, as
 
 ## Deployed Web Page
 You can find the deployed web page for this project [here!](https://deceitfuldragon.github.io/advanced-css-portfolio/)
+
+## Images
+The images used for the grid display were downloaded free from [Pixabay](https://pixabay.com/) and are not owned by me.
+Eric's avatar image was generated from [This Person Does Not Exist](https://this-person-does-not-exist.com/en)
