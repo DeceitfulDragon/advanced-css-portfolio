@@ -165,7 +165,7 @@ footer {
     padding: 1rem;
 }
 
-/* Media query for smaller (phone-sized) screens */
+/* Media query for smaller screens */
 @media (max-width: 768px) {
     .header-content, .work-gallery {
         flex-direction: column;
@@ -185,12 +185,11 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    
+
     .featured {
         grid-column: span 1;
     }
 
-    /* Make sure the contact form works on a small screen */
     #contact-form {
         margin-left: 1rem;
         margin-right: 1rem;
