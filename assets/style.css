@@ -1,0 +1,183 @@
+:root {
+    /* setup all the variables I might need later */
+    --primary-color: #005792;
+    --secondary-color: #00e5ff;
+    --text-color: #000000;
+    --background-color: #f4f4f4;
+    --section-background-color: #eaeaea;
+    --footer-background-color: #333333;
+    --link-color: #ffffff;
+    --border-color: #333333;
+    --featured-border-color: #3498db;
+    --box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body, html {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: var(--background-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+}
+
+/* NAVBAR */
+.navigation h1, .navigation nav ul {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navigation h1 {
+    margin: 0;
+    color: var(--link-color);
+}
+
+.navigation nav ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.navigation nav ul li {
+    margin-right: 20px;
+}
+
+.navigation nav ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navigation nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* the little circle of the fake guy I came up with on the header */
+.avatar img {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+/* adds section padding, makes it look nice */
+section {
+    padding: 2rem 2rem;
+    background: var(--section-background-color);
+}
+
+/* Work Gallery (for showcases projects and work, but I'm gonna fill it with random things) */
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 2rem;
+}
+
+.work-gallery article {
+    transition: transform 0.3s ease;
+    border: 2px dashed var(--border-color);
+    padding: 10px;
+    background: var(--link-color);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-gallery article:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.work-gallery article img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Makes the featured work box span 2 instead of 1 */
+.featured {
+    grid-column: span 2;
+}
+
+/* CONTACT FORM (should align to the left, make button change on hover*/
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-left: 2rem; 
+}
+
+#contact-form label {
+    margin-top: 10px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+#contact-form button {
+    background: var(--primary-color);
+    color: var(--link-color);
+    padding: 10px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: var(--secondary-color);
+}
+
+
+
+/* Footer */
+footer {
+    background: var(--footer-background-color);
+    color: var(--link-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Media query for smaller (phone-sized) screens */
+@media (max-width: 768px) {
+    .header-content, .work-gallery {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navigation nav ul {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .navigation nav ul li {
+        margin: 0 10px;
+    }
+
+    .work-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    
+    .featured {
+        grid-column: span 1;
+    }
+
+    /* Make sure the contact form works on a small screen */
+    #contact-form {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
