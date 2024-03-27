@@ -6,10 +6,12 @@ This repository should show that I can properly create a web page using HTML & C
 I've used semantic elements from module 1 to help create things like:
 - Header, Navbar, Footer
 - Sections, Articles
+
 While using my knowledge of CSS to make:
 - A grid display for portfolio projects
 - A featured application that's bigger than the rest
 - A contact form
+
 The clickable images for Eric's projects just return back to this repository, as I don't have anything deployed for them to link to. They are just mock-ups.
 
 ## Acceptance Criteria
